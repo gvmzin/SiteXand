@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdByXand - Mostruário de Beats</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <header id="topo" class="glass-effect sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white tracking-wider">ProdBy<span class="text-blue-500">Xand</span></a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#beats" class="nav-link">Beats</a>
+                <a href="#licencas" class="nav-link">Licença</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </div>
+            <a href="#beats" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300">
+                Ver Catálogo
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#beats" class="block py-2 nav-link">Beats</a>
+            <a href="#licencas" class="block py-2 nav-link">Licença</a>
+            <a href="#sobre" class="block py-2 nav-link">Sobre</a>
+            <a href="#contato" class="block py-2 nav-link">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative h-screen flex items-center justify-center text-center bg-grid overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/80 to-black"></div>
+            <div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-blue-600/30 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+            <div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-purple-600/30 rounded-full filter blur-3xl opacity-50 animate-pulse animation-delay-4000"></div>
+            
+            <div class="relative z-10 px-4">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-tight">
+                    Beats Para Seu <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500">Próximo Hit</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300">
+                    Encontre a batida perfeita para o seu som. Beats de alta qualidade nos gêneros Trap, Drill, R&B e mais.
+                </p>
+                <div class="mt-8">
+                    <a href="#beats" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg transform hover:scale-105">
+                        Explorar Beats
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="beats" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Catálogo de Beats</h2>
+                    <p class="text-gray-400 mt-2">Os mais recentes e populares.</p>
+                </div>
+                <div id="beats-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+                <div class="mt-12 text-center">
+                    <button id="open-modal-button" class="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                        Ver Mais Beats
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="licencas" class="py-20 md:py-32 bg-grid">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Opções de Licença</h2>
+                    <p class="text-gray-400 mt-2">Escolha o ideal para o seu projeto.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="glass-effect rounded-xl p-8 border border-blue-500/50 flex flex-col">
+                        <h3 class="text-2xl font-bold text-blue-400">Base</h3>
+                        <p class="text-4xl font-black text-white my-4">R$ 40</p>
+                        <ul class="space-y-3 text-gray-300 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Arquivo MP3</li>
+
+                        </ul>
+                        <button class="mt-8 w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition">Selecionar</button>
+                    </div>
+                    <div class="glass-effect rounded-xl p-8 border-2 border-blue-500 transform md:scale-110 shadow-2xl shadow-blue-500/20 flex flex-col">
+                        <div class="text-center">
+                            <span class="text-sm font-bold bg-blue-500 text-white py-1 px-4 rounded-full">MAIS POPULAR</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white text-center mt-4">Exclusivo</h3>
+                        <p class="text-5xl font-black text-white my-4 text-center">R$ 80</p>
+                        <ul class="space-y-3 text-gray-300 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Arquivos MP3</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Beat único pra você</li>
+                        </ul>
+                        <button class="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition accent-glow">Selecionar</button>
+                    </div>
+                    <div class="glass-effect rounded-xl p-8 border border-blue-500/50 flex flex-col">
+                        <h3 class="text-2xl font-bold text-blue-400">Personalizado</h3>
+                        <p class="text-4xl font-black text-white my-4">R$ 100</p>
+                        <ul class="space-y-3 text-gray-300 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Arquivos MP3</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Beat único pra você</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Contato pelo WhatsApp</li>
+                        </ul>
+                        <a href="#contato" class="mt-8 w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 rounded-lg transition">Negociar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3 flex justify-center">
+                        <img src="img/xandperfil.png" alt="Foto do Produtor Xand" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-blue-500 shadow-lg accent-glow">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white">Sobre Mim</h2>
+                        <p class="mt-4 text-lg text-gray-300">
+                            Olá, eu sou o Xand, um produtor musical apaixonado por criar beats que inspiram artistas a alcançarem seu potencial máximo. Com mais de 70 anos de experiência, meu foco é na qualidade sonora e na criação de instrumentais que se destacam no cenário musical atual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-20 md:py-32 bg-grid">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Vamos Trabalhar Juntos</h2>
+                    <p class="text-gray-400 mt-2">Entre em contato diretamente pelos links abaixo.</p>
+                </div>
+                <div class="glass-effect rounded-xl p-8 md:p-12 flex flex-col items-center space-y-6">
+                    <a href="https://wa.me/82999521144" target="_blank" class="w-full md:w-2/3 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 text-center flex items-center justify-center gap-2">
+                        Falar no WhatsApp
+                    </a>
+                    <a href="mailto:prodbyxand@gmail.com" class="w-full md:w-2/3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 text-center flex items-center justify-center gap-2">
+                        Enviar um E-mail
+                    </a>
+                    <a href="https://instagram.com/prodbyxand" target="_blank" class="w-full md:w-2/3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 hover:opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition transform hover:scale-105 text-center flex items-center justify-center gap-2">
+                        Mandar DM no Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900/50 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            &copy; 2025 <a href="https://github.com/gvmzin" target="_blank" class="text-400 hover:text-blue-500 transition">gvmzin</a>. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div id="player-container" class="fixed bottom-0 left-0 right-0 bg-gray-900/80 backdrop-blur-md border-t border-gray-700 p-4 z-50 transform translate-y-full transition-transform duration-300">
+        <div class="container mx-auto flex items-center gap-4">
+            <button id="player-play-pause" class="text-white bg-blue-600 rounded-full p-2"></button>
+            <img id="player-art" src="https://placehold.co/40x40/0a0a0a/3b82f6?text=X" alt="Arte do Beat" class="w-12 h-12 rounded-md object-cover">
+            <div class="flex-grow">
+                <h4 id="player-title" class="font-bold text-white">Selecione um Beat</h4>
+                <div class="flex items-center gap-2 text-xs text-gray-400">
+                    <span id="player-current-time">00:00</span>
+                    <input type="range" id="player-progress" value="0" min="0" max="100" class="w-full h-1 accent-blue-500 bg-gray-600 appearance-none cursor-pointer">
+                    <span id="player-duration">00:00</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3z" /></svg>
+                <input type="range" id="player-volume" min="0" max="1" step="0.01" value="1" class="w-24 h-1 accent-blue-500 bg-gray-600 appearance-none cursor-pointer">
+            </div>
+        </div>
+    </div>
+
+    <div id="modalBeats" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[60] hidden">
+        <div class="bg-gray-900 glass-effect max-w-5xl w-full mx-4 p-6 rounded-xl relative overflow-y-auto max-h-[90vh]">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-white text-3xl hover:text-red-500">&times;</button>
+            <h2 class="text-3xl font-bold text-white text-center mb-8">Mais Beats</h2>
+            <div id="modal-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
