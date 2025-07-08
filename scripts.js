@@ -49,6 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title') || createModalTitle();
     const closeModalButton = document.getElementById('close-modal-button');
     const styleCards = document.querySelectorAll('.style-card');
+    // --- Lógica do Menu Mobile ---
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
     
     // Player
     const playerContainer = document.getElementById('player-container');
@@ -220,4 +227,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa o botão de play/pause do player principal
     playerPlayPause.innerHTML = getPlayIcon();
+});
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
 });
