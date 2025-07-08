@@ -109,3 +109,33 @@ html {
     text-transform: uppercase;
     z-index: 10;
 }
+#basediv:hover{
+    transform: scale(1.15);
+    transition: transform 0.3s ease-in-out;
+    border-color: #3b82f6; /* Azul */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
+     
+}
+#basediv {
+    transition: transform 0.3s ease-in-out, box-shadow 0.6s ease-in-out, border-color 0.6s ease-in-out;
+}
+#exclusivodiv:hover{
+    transform: scale(1.15);
+    transition: transform 0.3s ease-in-out;
+    border-color: #3b82f6; /* Azul */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
+     
+}
+#exclusivodiv {
+    transition: transform 0.3s ease-in-out, box-shadow 0.6s ease-in-out, border-color 0.6s ease-in-out;
+}
+#personalizadodiv:hover{
+    transform: scale(1.15);
+    transition: transform 0.3s ease-in-out;
+    border-color: #3b82f6; /* Azul */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
+     
+}
+#personalizadodiv {
+    transition: transform 0.3s ease-in-out, box-shadow 0.6s ease-in-out, border-color 0.6s ease-in-out;
+}
