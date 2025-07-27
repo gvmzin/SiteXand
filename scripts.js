@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Estrutura de Dados dos Beats ---
-    // VERIFIQUE SE OS CAMINHOS EM "file" E "art" ESTÃO EXATAMENTE CORRETOS!
     const beatsData = {
         "Trap": [
             { title: "CINEMATIC", file: "audios/trap/CINEMATIC132BPMG.wav", art: "img/trap.jpeg", bpm: "132", key: "G#" },
@@ -74,7 +73,6 @@ mobileMenuButton.addEventListener('click', () => {
     audio.volume = 0.5;
     volumeControl.value = audio.volume;
     
-    // --- NOVO: Diagnóstico de Erros ---
     // Esta função será chamada se o navegador não conseguir carregar o áudio.
     audio.onerror = function() {
         console.error(`Erro: Não foi possível encontrar ou carregar o ficheiro de áudio: ${audio.src}`);
@@ -99,8 +97,6 @@ mobileMenuButton.addEventListener('click', () => {
         card.addEventListener('click', () => {
             const style = card.dataset.style;
             const beatsForStyle = beatsData[style] || [];
-            
-            // Corrigido para buscar o título do modal no HTML ou criar um novo
             const titleElement = modal.querySelector('#modal-title') || createModalTitle();
             titleElement.textContent = `Beats de ${style}`;
             
@@ -129,7 +125,6 @@ mobileMenuButton.addEventListener('click', () => {
         });
     }
 
-    // --- Lógica do Player ---
     function createBeatCard(beat) {
         const card = document.createElement('div');
         card.className = 'beat-card group glass-effect rounded-xl overflow-hidden';
@@ -174,7 +169,7 @@ mobileMenuButton.addEventListener('click', () => {
                 currentPlayingButton.innerHTML = getPlayIcon();
             }
             audio.src = beat.file;
-            audio.play().catch(e => console.error("Erro ao tentar tocar o áudio:", e)); // Adicionado .catch para mais detalhes do erro
+            audio.play().catch(e => console.error("Erro ao tentar tocar o áudio:", e));
             playerContainer.classList.remove('translate-y-full');
             updatePlayerInfo(beat);
             currentPlayingButton = button;
@@ -215,7 +210,6 @@ mobileMenuButton.addEventListener('click', () => {
         playerArt.src = beat.art;
     }
 
-    // --- Funções Utilitárias ---
     function formatTime(seconds) {
         const min = Math.floor(seconds / 60);
         const sec = Math.floor(seconds % 60);
